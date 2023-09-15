@@ -1,21 +1,43 @@
-# cdmVpU8
+# CSS Variables: A Quick Dive 📘
 
-Quick start:
+Hello! I explored a tutorial on CSS variables and found it quite enlightening. Here's a summary for quick reference.
 
+## Contents
+
+- **HTML Layout**: Comprising a navbar, portfolio display, and footer.
+- **CSS Basics**: Core styling for a neat design.
+- **CSS Variables**: Demonstrating the flexibility and efficiency they bring.
+- **JavaScript Play**: Manipulating CSS variables dynamically.
+
+## Key Takeaways 📌
+
+### Defining Global Variables
+Centralized style control. Set it once, use it everywhere.
+```css
+:root {
+    --red: #ff6f69;
+    --beige: #ffeead;
+    --yellow: #ffcc5c;
+    --offwhite: whitesmoke;
+}
 ```
-$ npm install
-$ npm start
-````
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+### Utilizing Variables
+Accessing and using the variables is made simple.
+```css
+body {
+    background: var(--beige);
+}
+```
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+### JavaScript and CSS Variables
+Dynamic style adjustments on-the-go.
+```javascript
+const root = document.querySelector(':root');
+const yellow = getComputedStyle(root).getPropertyValue('--yellow');
+root.style.setProperty('--yellow', 'orange');
+```
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Credits 🙏
 
-Happy Coding!
+- [Learn CSS Variables](https://scrimba.com/learn/cssvariables) by Scrimba

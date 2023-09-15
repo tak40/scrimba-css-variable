@@ -2,22 +2,52 @@
     --red: #ff6f69;
     --beige: #ffeead;
     --yellow: #ffcc5c;
+    --offwhite: whitesmoke;
 }
+
+.grid {
+    --columns: 200px 200px;
+}
+
+/* styles */
 
 html, body {
     background: var(--beige);
     color: var(--red);
 }
 
+#navbar {
+    --nav-red: #ff6f19;
+}
+
 #navbar a {
-    color: var(--red);
+    color: var(--nav-red);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: var(--columns);
+    grid-auto-rows: 140px;
+    grid-gap: 20px;
+    justify-content: center;
 }
 
 .item {
+    --red: #ff8e69;
     background: var(--yellow);
 }
 
 button {
     background: var(--red);
     color: var(--yellow);
+}
+
+@media all and (max-width: 600px) {
+    body {
+        background: var(--offwhite);
+    }
+
+    .grid {
+        --columns: 200px;
+    }
 }
